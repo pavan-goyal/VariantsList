@@ -19,6 +19,7 @@ class VariantsListViewController: UIViewController {
     static let variantItemCell = "VariationItemCell"
     let apiUrl = "https://api.myjson.com/bins/3b0u2"
     var variantList: VariantList!
+    var selectedIndexPaths = [String: IndexPath]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -58,11 +59,19 @@ extension VariantsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let variationGroup = variationGroups[indexPath.section]
-        guard let variations = variationGroup.variations else {
+        guard let variations = variationGroup.variations, let groupId = variationGroup.groupId else {
             return UITableViewCell()
         }
         let variation = variations[indexPath.row]
-        variationItemCell.updateVariationItemCell(with: variation)
+        var isSelected: Bool?
+        if let selectedIndexPath = selectedIndexPaths[groupId] {
+            if indexPath == selectedIndexPath {
+                isSelected = true
+            } else {
+                isSelected = false
+            }
+        }
+        variationItemCell.updateVariationItemCell(with: variation, isSelected: isSelected)
         return variationItemCell
     }
 }
@@ -78,13 +87,24 @@ extension VariantsListViewController: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
         guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: VariantsListViewController.variantHeaderGroup) as? VariantGroupHeader, let variationGroups = self.variantList.mainVariant?.variantGroups else {
             return nil
         }
         let variationGroup = variationGroups[section]
         headerView.updateHeaderView(with: variationGroup)
         return headerView
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        guard let variationGroups = self.variantList.mainVariant?.variantGroups else {
+            return
+        }
+        let variationGroup = variationGroups[indexPath.section]
+        guard let variations = variationGroup.variations, let groupId = variationGroup.groupId else {
+            return
+        }
+        selectedIndexPaths[groupId] = indexPath
+        tableView.reloadData()
     }
 }
 

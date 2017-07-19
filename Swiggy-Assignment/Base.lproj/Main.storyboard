@@ -25,16 +25,17 @@
                                 <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aN2-vx-TvM">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="aN2-vx-TvM">
                                 <rect key="frame" x="177" y="323" width="20" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="aN2-vx-TvM" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="5tf-6w-WCS"/>
                             <constraint firstItem="Ay7-vP-0wf" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Cfw-zb-Qfu"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Ay7-vP-0wf" secondAttribute="bottom" id="WZE-GJ-sKQ"/>
                             <constraint firstAttribute="trailing" secondItem="Ay7-vP-0wf" secondAttribute="trailing" id="nBE-nZ-8wV"/>
+                            <constraint firstItem="aN2-vx-TvM" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="plr-nO-BWm"/>
                             <constraint firstItem="Ay7-vP-0wf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="rVB-lG-wiO"/>
                         </constraints>
                     </view>
