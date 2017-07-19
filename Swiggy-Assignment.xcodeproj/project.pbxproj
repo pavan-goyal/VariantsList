@@ -17,6 +17,9 @@
 		702314681F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314671F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift */; };
 		702314791F1F935F00EB73D5 /* Variation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314781F1F935F00EB73D5 /* Variation.swift */; };
 		7023147B1F1F959400EB73D5 /* VariantGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023147A1F1F959400EB73D5 /* VariantGroup.swift */; };
+		7023147D1F1F9A7500EB73D5 /* ExcludedItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023147C1F1F9A7500EB73D5 /* ExcludedItem.swift */; };
+		7023147F1F1F9CDF00EB73D5 /* Variants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023147E1F1F9CDF00EB73D5 /* Variants.swift */; };
+		702314811F1F9DEB00EB73D5 /* VariantList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314801F1F9DEB00EB73D5 /* VariantList.swift */; };
 		7D2E64E864A04CFA73C103EC /* Pods_Swiggy_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */; };
 		946C63521664BB5FBCDA4295 /* Pods_Swiggy_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -61,6 +64,9 @@
 		702314691F1F8F1E00EB73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		702314781F1F935F00EB73D5 /* Variation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variation.swift; sourceTree = "<group>"; };
 		7023147A1F1F959400EB73D5 /* VariantGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariantGroup.swift; sourceTree = "<group>"; };
+		7023147C1F1F9A7500EB73D5 /* ExcludedItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExcludedItem.swift; sourceTree = "<group>"; };
+		7023147E1F1F9CDF00EB73D5 /* Variants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variants.swift; sourceTree = "<group>"; };
+		702314801F1F9DEB00EB73D5 /* VariantList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariantList.swift; sourceTree = "<group>"; };
 		89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-Assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -150,8 +156,11 @@
 		702314751F1F92FB00EB73D5 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				7023147E1F1F9CDF00EB73D5 /* Variants.swift */,
+				7023147C1F1F9A7500EB73D5 /* ExcludedItem.swift */,
 				7023147A1F1F959400EB73D5 /* VariantGroup.swift */,
 				702314781F1F935F00EB73D5 /* Variation.swift */,
+				702314801F1F9DEB00EB73D5 /* VariantList.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -463,9 +472,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				7023144A1F1F8F1E00EB73D5 /* VariantsListViewController.swift in Sources */,
+				7023147F1F1F9CDF00EB73D5 /* Variants.swift in Sources */,
+				702314811F1F9DEB00EB73D5 /* VariantList.swift in Sources */,
 				702314791F1F935F00EB73D5 /* Variation.swift in Sources */,
 				702314481F1F8F1E00EB73D5 /* AppDelegate.swift in Sources */,
 				7023147B1F1F959400EB73D5 /* VariantGroup.swift in Sources */,
+				7023147D1F1F9A7500EB73D5 /* ExcludedItem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
