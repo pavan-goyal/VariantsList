@@ -15,6 +15,8 @@
 		702314521F1F8F1E00EB73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702314501F1F8F1E00EB73D5 /* LaunchScreen.storyboard */; };
 		7023145D1F1F8F1E00EB73D5 /* Swiggy_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023145C1F1F8F1E00EB73D5 /* Swiggy_AssignmentTests.swift */; };
 		702314681F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314671F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift */; };
+		702314791F1F935F00EB73D5 /* Variation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314781F1F935F00EB73D5 /* Variation.swift */; };
+		7023147B1F1F959400EB73D5 /* VariantGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023147A1F1F959400EB73D5 /* VariantGroup.swift */; };
 		7D2E64E864A04CFA73C103EC /* Pods_Swiggy_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */; };
 		946C63521664BB5FBCDA4295 /* Pods_Swiggy_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -57,6 +59,8 @@
 		702314631F1F8F1E00EB73D5 /* Swiggy-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiggy-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		702314671F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiggy_AssignmentUITests.swift; sourceTree = "<group>"; };
 		702314691F1F8F1E00EB73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		702314781F1F935F00EB73D5 /* Variation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Variation.swift; sourceTree = "<group>"; };
+		7023147A1F1F959400EB73D5 /* VariantGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariantGroup.swift; sourceTree = "<group>"; };
 		89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-Assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -115,11 +119,12 @@
 			isa = PBXGroup;
 			children = (
 				702314471F1F8F1E00EB73D5 /* AppDelegate.swift */,
-				702314491F1F8F1E00EB73D5 /* VariantsListViewController.swift */,
-				7023144B1F1F8F1E00EB73D5 /* Main.storyboard */,
 				7023144E1F1F8F1E00EB73D5 /* Assets.xcassets */,
-				702314501F1F8F1E00EB73D5 /* LaunchScreen.storyboard */,
 				702314531F1F8F1E00EB73D5 /* Info.plist */,
+				702314501F1F8F1E00EB73D5 /* LaunchScreen.storyboard */,
+				7023144B1F1F8F1E00EB73D5 /* Main.storyboard */,
+				702314751F1F92FB00EB73D5 /* Models */,
+				702314491F1F8F1E00EB73D5 /* VariantsListViewController.swift */,
 			);
 			path = "Swiggy-Assignment";
 			sourceTree = "<group>";
@@ -140,6 +145,15 @@
 				702314691F1F8F1E00EB73D5 /* Info.plist */,
 			);
 			path = "Swiggy-AssignmentUITests";
+			sourceTree = "<group>";
+		};
+		702314751F1F92FB00EB73D5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				7023147A1F1F959400EB73D5 /* VariantGroup.swift */,
+				702314781F1F935F00EB73D5 /* Variation.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		7D3EC50C78DE5FC6D44A8668 /* Frameworks */ = {
@@ -449,7 +463,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				7023144A1F1F8F1E00EB73D5 /* VariantsListViewController.swift in Sources */,
+				702314791F1F935F00EB73D5 /* Variation.swift in Sources */,
 				702314481F1F8F1E00EB73D5 /* AppDelegate.swift in Sources */,
+				7023147B1F1F959400EB73D5 /* VariantGroup.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -706,6 +722,7 @@
 				7023146E1F1F8F1E00EB73D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7023146F1F1F8F1E00EB73D5 /* Build configuration list for PBXNativeTarget "Swiggy-AssignmentTests" */ = {
 			isa = XCConfigurationList;
@@ -714,6 +731,7 @@
 				702314711F1F8F1E00EB73D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		702314721F1F8F1E00EB73D5 /* Build configuration list for PBXNativeTarget "Swiggy-AssignmentUITests" */ = {
 			isa = XCConfigurationList;
@@ -722,6 +740,7 @@
 				702314741F1F8F1E00EB73D5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
