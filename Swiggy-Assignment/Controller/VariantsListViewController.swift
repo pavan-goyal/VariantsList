@@ -15,11 +15,14 @@ class VariantsListViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loaderView: UIActivityIndicatorView!
     
+    static let variantHeaderGroup = "VariantGroupHeader"
+    static let variantItemCell = "VariationItemCell"
     let apiUrl = "https://api.myjson.com/bins/3b0u2"
     var variantList: VariantList!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.automaticallyAdjustsScrollViewInsets = false
         showLoaderView()
         Alamofire.request(apiUrl).responseObject { [weak self] (response: DataResponse<VariantList>) in
             guard let weakSelf = self, let variantList = response.value else {
@@ -51,30 +54,49 @@ extension VariantsListViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        return UITableViewCell()
+        guard let variationItemCell = tableView.dequeueReusableCell(withIdentifier: VariantsListViewController.variantItemCell, for: indexPath) as? VariationItemCell, let variationGroups = self.variantList.mainVariant?.variantGroups else {
+            return UITableViewCell()
+        }
+        let variationGroup = variationGroups[indexPath.section]
+        guard let variations = variationGroup.variations else {
+            return UITableViewCell()
+        }
+        let variation = variations[indexPath.row]
+        variationItemCell.updateVariationItemCell(with: variation)
+        return variationItemCell
     }
 }
 
 extension VariantsListViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 40
+        return VariationItemCell.height()
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return VariantGroupHeader.height()
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        return nil
+        
+        guard let headerView = tableView.dequeueReusableHeaderFooterView(withIdentifier: VariantsListViewController.variantHeaderGroup) as? VariantGroupHeader, let variationGroups = self.variantList.mainVariant?.variantGroups else {
+            return nil
+        }
+        let variationGroup = variationGroups[section]
+        headerView.updateHeaderView(with: variationGroup)
+        return headerView
     }
 }
 
 extension VariantsListViewController {
     
     func setUpTableView() {
+        self.tableView.tableFooterView = UIView()
+        self.tableView.separatorColor = UIColor.clear
         self.tableView.dataSource = self
         self.tableView.delegate = self
+        self.tableView.register(UINib(nibName: VariantsListViewController.variantHeaderGroup, bundle: nil), forHeaderFooterViewReuseIdentifier: VariantsListViewController.variantHeaderGroup)
+        self.tableView.register(UINib(nibName: VariantsListViewController.variantItemCell, bundle: nil), forCellReuseIdentifier: VariantsListViewController.variantItemCell)
     }
     
     func showTableView() {
