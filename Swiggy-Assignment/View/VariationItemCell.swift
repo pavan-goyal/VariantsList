@@ -14,6 +14,7 @@ class VariationItemCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
+        self.selectionStyle = .none
     }
 
     func updateVariationItemCell(with variation: Variation) {
@@ -21,7 +22,7 @@ class VariationItemCell: UITableViewCell {
     }
 
     static func height() -> CGFloat {
-        return CGFloat(40)
+        return CGFloat(44)
     }
     
 }

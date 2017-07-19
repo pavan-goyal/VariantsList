@@ -21,7 +21,7 @@ class VariantGroupHeader: UITableViewHeaderFooterView {
     }
     
     static func height() -> CGFloat {
-        return CGFloat(50)
+        return CGFloat(44)
     }
     
 }
