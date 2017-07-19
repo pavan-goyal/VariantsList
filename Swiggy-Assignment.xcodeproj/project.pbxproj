@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07A900680DD488B4569E6D37 /* Pods_Swiggy_AssignmentTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8791A2E7029D71A13F393B /* Pods_Swiggy_AssignmentTests.framework */; };
 		702314481F1F8F1E00EB73D5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314471F1F8F1E00EB73D5 /* AppDelegate.swift */; };
 		7023144A1F1F8F1E00EB73D5 /* VariantsListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314491F1F8F1E00EB73D5 /* VariantsListViewController.swift */; };
 		7023144D1F1F8F1E00EB73D5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7023144B1F1F8F1E00EB73D5 /* Main.storyboard */; };
@@ -14,6 +15,8 @@
 		702314521F1F8F1E00EB73D5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 702314501F1F8F1E00EB73D5 /* LaunchScreen.storyboard */; };
 		7023145D1F1F8F1E00EB73D5 /* Swiggy_AssignmentTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7023145C1F1F8F1E00EB73D5 /* Swiggy_AssignmentTests.swift */; };
 		702314681F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314671F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift */; };
+		7D2E64E864A04CFA73C103EC /* Pods_Swiggy_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */; };
+		946C63521664BB5FBCDA4295 /* Pods_Swiggy_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -34,6 +37,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		066902067BE5177F733138E9 /* Pods-Swiggy-AssignmentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-AssignmentTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-AssignmentTests/Pods-Swiggy-AssignmentTests.debug.xcconfig"; sourceTree = "<group>"; };
+		1D1723BFA8BE4D0430F92308 /* Pods-Swiggy-AssignmentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-AssignmentTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-AssignmentTests/Pods-Swiggy-AssignmentTests.release.xcconfig"; sourceTree = "<group>"; };
+		2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_Assignment.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		31B6E363CB7754452746B650 /* Pods-Swiggy-AssignmentUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-AssignmentUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-AssignmentUITests/Pods-Swiggy-AssignmentUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A8791A2E7029D71A13F393B /* Pods_Swiggy_AssignmentTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_AssignmentTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		610D14ACDC43C33829D8E16D /* Pods-Swiggy-AssignmentUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-AssignmentUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-AssignmentUITests/Pods-Swiggy-AssignmentUITests.release.xcconfig"; sourceTree = "<group>"; };
+		6BE20C7EF006C97CB32515C6 /* Pods-Swiggy-Assignment.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-Assignment.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment.debug.xcconfig"; sourceTree = "<group>"; };
 		702314441F1F8F1E00EB73D5 /* Swiggy-Assignment.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Swiggy-Assignment.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		702314471F1F8F1E00EB73D5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		702314491F1F8F1E00EB73D5 /* VariantsListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariantsListViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +57,8 @@
 		702314631F1F8F1E00EB73D5 /* Swiggy-AssignmentUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Swiggy-AssignmentUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		702314671F1F8F1E00EB73D5 /* Swiggy_AssignmentUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Swiggy_AssignmentUITests.swift; sourceTree = "<group>"; };
 		702314691F1F8F1E00EB73D5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-Assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment.release.xcconfig"; sourceTree = "<group>"; };
+		FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D2E64E864A04CFA73C103EC /* Pods_Swiggy_Assignment.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -61,6 +74,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07A900680DD488B4569E6D37 /* Pods_Swiggy_AssignmentTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +82,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				946C63521664BB5FBCDA4295 /* Pods_Swiggy_AssignmentUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -81,6 +96,8 @@
 				7023145B1F1F8F1E00EB73D5 /* Swiggy-AssignmentTests */,
 				702314661F1F8F1E00EB73D5 /* Swiggy-AssignmentUITests */,
 				702314451F1F8F1E00EB73D5 /* Products */,
+				9CD6FEF7A1C41E74E8C67F00 /* Pods */,
+				7D3EC50C78DE5FC6D44A8668 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -125,6 +142,29 @@
 			path = "Swiggy-AssignmentUITests";
 			sourceTree = "<group>";
 		};
+		7D3EC50C78DE5FC6D44A8668 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */,
+				3A8791A2E7029D71A13F393B /* Pods_Swiggy_AssignmentTests.framework */,
+				FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9CD6FEF7A1C41E74E8C67F00 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				6BE20C7EF006C97CB32515C6 /* Pods-Swiggy-Assignment.debug.xcconfig */,
+				89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */,
+				066902067BE5177F733138E9 /* Pods-Swiggy-AssignmentTests.debug.xcconfig */,
+				1D1723BFA8BE4D0430F92308 /* Pods-Swiggy-AssignmentTests.release.xcconfig */,
+				31B6E363CB7754452746B650 /* Pods-Swiggy-AssignmentUITests.debug.xcconfig */,
+				610D14ACDC43C33829D8E16D /* Pods-Swiggy-AssignmentUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -132,9 +172,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7023146C1F1F8F1E00EB73D5 /* Build configuration list for PBXNativeTarget "Swiggy-Assignment" */;
 			buildPhases = (
+				521C7C61B40889E07740EC04 /* [CP] Check Pods Manifest.lock */,
 				702314401F1F8F1E00EB73D5 /* Sources */,
 				702314411F1F8F1E00EB73D5 /* Frameworks */,
 				702314421F1F8F1E00EB73D5 /* Resources */,
+				90866DB3C1277BF22822E371 /* [CP] Embed Pods Frameworks */,
+				D6B34F1AA06C6C20FA0C3E9D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -149,9 +192,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 7023146F1F1F8F1E00EB73D5 /* Build configuration list for PBXNativeTarget "Swiggy-AssignmentTests" */;
 			buildPhases = (
+				EC72E4B64B43885C5110F65D /* [CP] Check Pods Manifest.lock */,
 				702314541F1F8F1E00EB73D5 /* Sources */,
 				702314551F1F8F1E00EB73D5 /* Frameworks */,
 				702314561F1F8F1E00EB73D5 /* Resources */,
+				F3059EC526BCBCE0720672C4 /* [CP] Embed Pods Frameworks */,
+				E63173630D329895B5BA4511 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -167,9 +213,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 702314721F1F8F1E00EB73D5 /* Build configuration list for PBXNativeTarget "Swiggy-AssignmentUITests" */;
 			buildPhases = (
+				9C7E234E97DDFDB257EB0762 /* [CP] Check Pods Manifest.lock */,
 				7023145F1F1F8F1E00EB73D5 /* Sources */,
 				702314601F1F8F1E00EB73D5 /* Frameworks */,
 				702314611F1F8F1E00EB73D5 /* Resources */,
+				05555B474F382326C22D0757 /* [CP] Embed Pods Frameworks */,
+				F02634D78F30D24DBECC0726 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -255,6 +304,144 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		05555B474F382326C22D0757 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-AssignmentUITests/Pods-Swiggy-AssignmentUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		521C7C61B40889E07740EC04 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		90866DB3C1277BF22822E371 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9C7E234E97DDFDB257EB0762 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		D6B34F1AA06C6C20FA0C3E9D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E63173630D329895B5BA4511 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-AssignmentTests/Pods-Swiggy-AssignmentTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EC72E4B64B43885C5110F65D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		F02634D78F30D24DBECC0726 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-AssignmentUITests/Pods-Swiggy-AssignmentUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F3059EC526BCBCE0720672C4 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Swiggy-AssignmentTests/Pods-Swiggy-AssignmentTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		702314401F1F8F1E00EB73D5 /* Sources */ = {
@@ -412,6 +599,7 @@
 		};
 		7023146D1F1F8F1E00EB73D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6BE20C7EF006C97CB32515C6 /* Pods-Swiggy-Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -425,6 +613,7 @@
 		};
 		7023146E1F1F8F1E00EB73D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = "";
@@ -438,6 +627,7 @@
 		};
 		702314701F1F8F1E00EB73D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 066902067BE5177F733138E9 /* Pods-Swiggy-AssignmentTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -453,6 +643,7 @@
 		};
 		702314711F1F8F1E00EB73D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1D1723BFA8BE4D0430F92308 /* Pods-Swiggy-AssignmentTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -468,6 +659,7 @@
 		};
 		702314731F1F8F1E00EB73D5 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 31B6E363CB7754452746B650 /* Pods-Swiggy-AssignmentUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CUPR9ZQ95N;
@@ -482,6 +674,7 @@
 		};
 		702314741F1F8F1E00EB73D5 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 610D14ACDC43C33829D8E16D /* Pods-Swiggy-AssignmentUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				DEVELOPMENT_TEAM = CUPR9ZQ95N;
