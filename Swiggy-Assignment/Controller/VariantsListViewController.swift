@@ -53,13 +53,17 @@ class VariantsListViewController: UIViewController {
                     break
                 }
             }
+            self.view.hideToasts()
             if isPresent {
                 // show error
+                self.view.makeToast("This combination is not allowed", duration: 2.0, position: CSToastPositionCustom)
             } else {
                 // safely proceed user to next screen
+                self.view.makeToast("Success! user can be safely navigated to next screen", duration: 2.0, position: CSToastPositionCustom)
             }
         } else {
             // safely proceed user to next screen. because no excludedList present
+            self.view.makeToast("Success! user can be safely navigated to next screen", duration: 2.0, position: CSToastPositionCustom)
         }
     }
 }
