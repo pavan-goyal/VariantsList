@@ -12,6 +12,8 @@ class VariationItemCell: UITableViewCell {
 
     @IBOutlet weak var variationItemName: UILabel!
     @IBOutlet weak var radioButtonImageView: UIImageView!
+    @IBOutlet weak var priceLabel: UILabel!
+    @IBOutlet weak var inStockLabel: UILabel!
     
     let radioNotSelected = "radio_not_selected"
     let radioSelected = "radio_selected"
@@ -24,6 +26,19 @@ class VariationItemCell: UITableViewCell {
     func updateVariationItemCell(with variation: Variation, isSelected: Bool) {
         self.variationItemName.text = variation.name ?? ""
         isSelected ? (self.radioButtonImageView.image = UIImage(named: radioSelected)) : (self.radioButtonImageView.image = UIImage(named: radioNotSelected))
+        if let price = variation.price {
+            self.priceLabel.text = "Price: \(price)"
+            self.priceLabel.isHidden = false
+        } else {
+            self.priceLabel.isHidden = true
+        }
+        
+        if let inStock = variation.inStock {
+            self.inStockLabel.text = "Item InStock: \((inStock == 1) ? "Yes" : "No")"
+            self.inStockLabel.isHidden = false
+        } else {
+            self.inStockLabel.isHidden = true
+        }
     }
 
     static func height() -> CGFloat {

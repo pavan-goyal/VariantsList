@@ -18,7 +18,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_not_select" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-4k-wJz">
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="radio_not_selected" translatesAutoresizingMaskIntoConstraints="NO" id="D9b-4k-wJz">
                         <rect key="frame" x="8" y="11" width="22" height="22"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="22" id="W1B-AZ-lRB"/>
@@ -32,10 +32,26 @@
                         <color key="textColor" red="0.25098039215686274" green="0.25098039215686274" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8c-xu-sMJ" userLabel="price">
+                        <rect key="frame" x="263" y="4" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zDn-OZ-ErT" userLabel="instock">
+                        <rect key="frame" x="263" y="23.5" width="33" height="16"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                 </subviews>
                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                 <constraints>
+                    <constraint firstAttribute="bottom" secondItem="zDn-OZ-ErT" secondAttribute="bottom" constant="4" id="3vE-6M-aEO"/>
                     <constraint firstItem="D9b-4k-wJz" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="C7c-sR-Z2A"/>
+                    <constraint firstItem="zDn-OZ-ErT" firstAttribute="trailing" secondItem="l8c-xu-sMJ" secondAttribute="trailing" id="EJW-TI-Aku"/>
+                    <constraint firstItem="l8c-xu-sMJ" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="G84-R2-wpZ"/>
+                    <constraint firstAttribute="trailing" secondItem="l8c-xu-sMJ" secondAttribute="trailing" constant="24" id="kET-oZ-qct"/>
                     <constraint firstItem="D9b-4k-wJz" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="rOq-DL-nEp"/>
                     <constraint firstItem="Q5z-0x-M1H" firstAttribute="leading" secondItem="D9b-4k-wJz" secondAttribute="trailing" constant="16" id="y6p-vC-4og"/>
                     <constraint firstItem="Q5z-0x-M1H" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="z4G-5o-VYz"/>
@@ -43,12 +59,14 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="inStockLabel" destination="zDn-OZ-ErT" id="uwk-f9-mVY"/>
+                <outlet property="priceLabel" destination="l8c-xu-sMJ" id="HUE-JB-O5b"/>
                 <outlet property="radioButtonImageView" destination="D9b-4k-wJz" id="cRe-7c-aPi"/>
                 <outlet property="variationItemName" destination="Q5z-0x-M1H" id="w7e-dg-z3N"/>
             </connections>
         </tableViewCell>
     </objects>
     <resources>
-        <image name="radio_not_select" width="22" height="22"/>
+        <image name="radio_not_selected" width="22" height="22"/>
     </resources>
 </document>
