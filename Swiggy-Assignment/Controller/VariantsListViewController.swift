@@ -90,7 +90,7 @@ extension VariantsListViewController: UITableViewDataSource {
             return UITableViewCell()
         }
         let variation = variations[indexPath.row]
-        var isSelected: Bool?
+        var isSelected: Bool 
         if let selectedIndexPath = selectedIndexPaths[groupId] {
             if indexPath == selectedIndexPath {
                 isSelected = true
@@ -100,8 +100,13 @@ extension VariantsListViewController: UITableViewDataSource {
         } else {
             if let isDefault = variation.isDefault {
                 if isDefault == 1 {
+                    isSelected = true
                     selectedIndexPaths[groupId] = indexPath
+                } else {
+                    isSelected = false
                 }
+            } else {
+                isSelected = false
             }
         }
         variationItemCell.updateVariationItemCell(with: variation, isSelected: isSelected)

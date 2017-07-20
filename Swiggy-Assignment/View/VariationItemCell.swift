@@ -21,33 +21,13 @@ class VariationItemCell: UITableViewCell {
         self.selectionStyle = .none
     }
 
-    func updateVariationItemCell(with variation: Variation, isSelected: Bool?) {
+    func updateVariationItemCell(with variation: Variation, isSelected: Bool) {
         self.variationItemName.text = variation.name ?? ""
-        updateImageOfRadioButton(with: variation, isSelected: isSelected)
+        isSelected ? (self.radioButtonImageView.image = UIImage(named: radioSelected)) : (self.radioButtonImageView.image = UIImage(named: radioNotSelected))
     }
 
     static func height() -> CGFloat {
         return CGFloat(44)
-    }
-    
-    func updateImageOfRadioButton(with variation: Variation, isSelected: Bool?) {
-        if let isSelected = isSelected {
-            if isSelected == true {
-                self.radioButtonImageView.image = UIImage(named: radioSelected)
-            } else {
-                self.radioButtonImageView.image = UIImage(named: radioNotSelected)
-            }
-        } else {
-            if let isDefault = variation.isDefault {
-                if isDefault == 1 {
-                    self.radioButtonImageView.image = UIImage(named: radioSelected)
-                } else {
-                    self.radioButtonImageView.image = UIImage(named: radioNotSelected)
-                }
-            } else {
-                self.radioButtonImageView.image = UIImage(named: radioNotSelected)
-            }
-        }
     }
     
     func disableCell() {
