@@ -97,6 +97,16 @@ extension VariantsListViewController: UITableViewDataSource {
             } else {
                 isSelected = false
             }
+        } else {
+            if let isDefault = variation.isDefault {
+                if isDefault == 1 {
+                    selectedIndexPaths[groupId] = indexPath
+                } else {
+                    
+                }
+            } else {
+                
+            }
         }
         variationItemCell.updateVariationItemCell(with: variation, isSelected: isSelected)
         return variationItemCell
