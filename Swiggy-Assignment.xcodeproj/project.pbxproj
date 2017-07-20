@@ -24,6 +24,7 @@
 		702314941F1FB3D300EB73D5 /* VariantGroupHeader.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702314931F1FB3D300EB73D5 /* VariantGroupHeader.xib */; };
 		702314971F1FC6CC00EB73D5 /* VariationItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 702314951F1FC6CC00EB73D5 /* VariationItemCell.swift */; };
 		702314981F1FC6CC00EB73D5 /* VariationItemCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 702314961F1FC6CC00EB73D5 /* VariationItemCell.xib */; };
+		7023149D1F20E90700EB73D5 /* UIView+Toast.m in Sources */ = {isa = PBXBuildFile; fileRef = 7023149C1F20E90700EB73D5 /* UIView+Toast.m */; };
 		7D2E64E864A04CFA73C103EC /* Pods_Swiggy_Assignment.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F897AC769393C9BD6131E4A /* Pods_Swiggy_Assignment.framework */; };
 		946C63521664BB5FBCDA4295 /* Pods_Swiggy_AssignmentUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */; };
 /* End PBXBuildFile section */
@@ -75,6 +76,9 @@
 		702314931F1FB3D300EB73D5 /* VariantGroupHeader.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VariantGroupHeader.xib; sourceTree = "<group>"; };
 		702314951F1FC6CC00EB73D5 /* VariationItemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VariationItemCell.swift; sourceTree = "<group>"; };
 		702314961F1FC6CC00EB73D5 /* VariationItemCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = VariationItemCell.xib; sourceTree = "<group>"; };
+		7023149A1F20E90600EB73D5 /* Swiggy-Assignment-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Swiggy-Assignment-Bridging-Header.h"; sourceTree = "<group>"; };
+		7023149B1F20E90700EB73D5 /* UIView+Toast.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Toast.h"; sourceTree = "<group>"; };
+		7023149C1F20E90700EB73D5 /* UIView+Toast.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Toast.m"; sourceTree = "<group>"; };
 		89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Swiggy-Assignment.release.xcconfig"; path = "Pods/Target Support Files/Pods-Swiggy-Assignment/Pods-Swiggy-Assignment.release.xcconfig"; sourceTree = "<group>"; };
 		FC025382F7D0E06EE645C3CA /* Pods_Swiggy_AssignmentUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Swiggy_AssignmentUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -132,6 +136,7 @@
 		702314461F1F8F1E00EB73D5 /* Swiggy-Assignment */ = {
 			isa = PBXGroup;
 			children = (
+				702314991F20E8ED00EB73D5 /* Toast */,
 				702314471F1F8F1E00EB73D5 /* AppDelegate.swift */,
 				7023144E1F1F8F1E00EB73D5 /* Assets.xcassets */,
 				702314531F1F8F1E00EB73D5 /* Info.plist */,
@@ -191,6 +196,16 @@
 				702314851F1FB28400EB73D5 /* VariantsListViewController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		702314991F20E8ED00EB73D5 /* Toast */ = {
+			isa = PBXGroup;
+			children = (
+				7023149B1F20E90700EB73D5 /* UIView+Toast.h */,
+				7023149C1F20E90700EB73D5 /* UIView+Toast.m */,
+				7023149A1F20E90600EB73D5 /* Swiggy-Assignment-Bridging-Header.h */,
+			);
+			path = Toast;
 			sourceTree = "<group>";
 		};
 		7D3EC50C78DE5FC6D44A8668 /* Frameworks */ = {
@@ -293,6 +308,7 @@
 				TargetAttributes = {
 					702314431F1F8F1E00EB73D5 = {
 						CreatedOnToolsVersion = 8.3.2;
+						LastSwiftMigration = 0830;
 						ProvisioningStyle = Automatic;
 					};
 					702314571F1F8F1E00EB73D5 = {
@@ -509,6 +525,7 @@
 				7023148E1F1FB29B00EB73D5 /* VariantList.swift in Sources */,
 				702314921F1FB37400EB73D5 /* VariantGroupHeader.swift in Sources */,
 				702314971F1FC6CC00EB73D5 /* VariationItemCell.swift in Sources */,
+				7023149D1F20E90700EB73D5 /* UIView+Toast.m in Sources */,
 				702314901F1FB29B00EB73D5 /* Variation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -662,11 +679,14 @@
 			baseConfigurationReference = 6BE20C7EF006C97CB32515C6 /* Pods-Swiggy-Assignment.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swiggy-Assignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.til.swift.Swiggy-Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swiggy-Assignment/Toast/Swiggy-Assignment-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -676,11 +696,13 @@
 			baseConfigurationReference = 89777AB5FC96C45B120D84C2 /* Pods-Swiggy-Assignment.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = "Swiggy-Assignment/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.til.swift.Swiggy-Assignment";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Swiggy-Assignment/Toast/Swiggy-Assignment-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

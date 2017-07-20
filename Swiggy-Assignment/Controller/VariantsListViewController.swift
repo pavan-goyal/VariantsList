@@ -59,7 +59,7 @@ class VariantsListViewController: UIViewController {
                 // safely proceed user to next screen
             }
         } else {
-           // safely proceed user to next screen. because no excludedList present
+            // safely proceed user to next screen. because no excludedList present
         }
     }
 }
@@ -101,11 +101,7 @@ extension VariantsListViewController: UITableViewDataSource {
             if let isDefault = variation.isDefault {
                 if isDefault == 1 {
                     selectedIndexPaths[groupId] = indexPath
-                } else {
-                    
                 }
-            } else {
-                
             }
         }
         variationItemCell.updateVariationItemCell(with: variation, isSelected: isSelected)
