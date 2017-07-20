@@ -14,6 +14,7 @@ class VariantsListViewController: UIViewController {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var loaderView: UIActivityIndicatorView!
+    @IBOutlet weak var proceedButton: UIButton!
     
     static let variantHeaderGroup = "VariantGroupHeader"
     static let variantItemCell = "VariationItemCell"
@@ -30,9 +31,35 @@ class VariantsListViewController: UIViewController {
                 return
             }
             weakSelf.variantList = variantList
-            weakSelf.showTableView()
             weakSelf.setUpTableView()
+            weakSelf.showTableView()
             weakSelf.tableView.reloadData()
+        }
+    }
+    
+    @IBAction func proceedButtonTapped(_ sender: UIButton) {
+        if let excludedItemsArray = self.variantList.mainVariant?.excludeList {
+            var excludedItemsFromSelectedIndexPaths = [ExcludedItem]()
+            for (_, selectedIndexPath) in selectedIndexPaths {
+                let (gId, vId) = getIds(from: selectedIndexPath)
+                let excludedItem = ExcludedItem(groupId: gId, variationId: vId)
+                excludedItemsFromSelectedIndexPaths.append(excludedItem)
+            }
+            
+            var isPresent = false
+            for excludedItems in excludedItemsArray {
+                if check(excludedItems: excludedItems, presentIn: excludedItemsFromSelectedIndexPaths) {
+                    isPresent = true
+                    break
+                }
+            }
+            if isPresent {
+                // show error
+            } else {
+                // safely proceed user to next screen
+            }
+        } else {
+           // safely proceed user to next screen. because no excludedList present
         }
     }
 }
@@ -100,7 +127,7 @@ extension VariantsListViewController: UITableViewDelegate {
             return
         }
         let variationGroup = variationGroups[indexPath.section]
-        guard let variations = variationGroup.variations, let groupId = variationGroup.groupId else {
+        guard let groupId = variationGroup.groupId else {
             return
         }
         selectedIndexPaths[groupId] = indexPath
@@ -121,12 +148,59 @@ extension VariantsListViewController {
     
     func showTableView() {
         self.tableView.isHidden = false
+        self.proceedButton.isHidden = false
         self.loaderView.isHidden = true
     }
     
     func showLoaderView() {
         self.tableView.isHidden = true
+        self.proceedButton.isHidden = true
         self.loaderView.isHidden = false
+    }
+    
+    func hideLoaderAndTableView() {
+        self.tableView.isHidden = true
+        self.proceedButton.isHidden = true
+        self.loaderView.isHidden = true
+    }
+    
+    func check(excludedItems: [ExcludedItem], presentIn otherExcludedItems: [ExcludedItem]) -> Bool {
+        var allItemsPresent = true
+        for excludedItem in excludedItems {
+            if !check(excludedItem: excludedItem, presentIn: otherExcludedItems) {
+                allItemsPresent = false
+                break
+            }
+        }
+        return allItemsPresent
+    }
+    
+    func check(excludedItem: ExcludedItem, presentIn otherExcludedItems: [ExcludedItem]) -> Bool {
+        var itemIsPresent = false
+        for otherExcludedItem in otherExcludedItems {
+            if excludedItem == otherExcludedItem {
+                itemIsPresent = true
+                break
+            }
+        }
+        return itemIsPresent
+    }
+    
+    func getIds(from indexPath:IndexPath) -> (String?, String?) {
+        var groupId: String?
+        var variationId: String?
+        guard let variationGroups = self.variantList.mainVariant?.variantGroups else {
+            return(groupId, variationId)
+        }
+        let variationGroup = variationGroups[indexPath.section]
+        guard let variations = variationGroup.variations else {
+            groupId = variationGroup.groupId
+            return(groupId, variationId)
+        }
+        let variation = variations[indexPath.row]
+        groupId = variationGroup.groupId
+        variationId = variation.variationId
+        return(groupId, variationId)
     }
 }
 
